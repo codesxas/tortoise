@@ -91,6 +91,10 @@ function Game() {
       } else {
         handleChange("error", true);
         startTimer(state.time + 50);
+
+        setTimeout(() => {
+          handleChange("error", false);
+        }, 1000);
       }
     }
 
