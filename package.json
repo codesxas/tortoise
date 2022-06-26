@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "tortoise-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "compile:scss": "sass --watch src/assets/scss/index.scss:src/assets/css/index.css",
     "format": "prettier --write \"src/**/*.tsx\" \"src/**/*.js\" \"src/**/*.scss\"",
-    "publishToHeroku": "cd ../ && git subtree push --prefix client heroku master || true"
+    "publishToHeroku": "git push heroku master"
   },
   "eslintConfig": {
     "extends": [
