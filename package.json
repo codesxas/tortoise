@@ -20,7 +20,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "compile:scss": "sass --watch src/assets/scss/index.scss:src/assets/css/index.css",
+    "format": "prettier --write \"src/**/*.tsx\" \"src/**/*.js\" \"src/**/*.scss\"",
+    "publishToHeroku": "cd ../ && git subtree push --prefix client heroku master || true"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "react-icons": "^4.4.0"
   }
 }

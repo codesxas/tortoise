@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&family=Jost&family=Marcellus&family=Ms+Madi&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+/* Colors */
+$clr-base: #0b1952;
+
+$clr-ntrl-min: #fff;
+$clr-ntrl-max: #333;
+
+/* Fonts */
+
+/* Font Sizes */
+$fs-base: 1.6rem;
+
+/* heading font-sizes */
+$fs-h1: 3.6rem;
+$fs-h2: 3.2rem;
+$fs-h3: 2.8rem;
+$fs-h4: 2.4rem;
+$fs-h5: 2rem;
+$fs-h6: 1.8rem;
+
+/* smaller than heading font sizes */
+$fs-milli: 1.4rem;
+$fs-micro: 1.2rem;
+$fs-nano: 1rem;
+
+/* font-family */
+$ff-base: "Jost", sans-serif;
+$ff-alt-alpha: 'Libre Baskerville', serif;
+$ff-alt-beta: "ABeeZee", sans-serif;
+$ff-alt-gamma: "Marcellus", serif;
