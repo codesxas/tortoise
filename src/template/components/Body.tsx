@@ -30,7 +30,7 @@ function Body({ startGame, state, checkInputString, resetTimer }: Props) {
           }`}
         >
           <div className="char-screen">
-            <span className={`${state.gameState === "Failure" && "failed"}`}>
+            <span className={`${state.gameState === "Failure" && "error"}`}>
               {state.currChar ? state.currChar : state.gameState}
             </span>
           </div>

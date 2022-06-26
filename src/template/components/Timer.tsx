@@ -3,9 +3,10 @@ import React from "react";
 type Props = {
   time: number;
   highScore: number;
+  error: boolean;
 };
 
-function Timer({ time, highScore }: Props) {
+function Timer({ time, highScore, error }: Props) {
   const min: number = getMinute(time);
   const sec: number = getSec(time, min);
   const milli: number = getMilliSec(time, min, sec);
@@ -29,10 +30,21 @@ function Timer({ time, highScore }: Props) {
     return milli;
   }
 
+  function addErrorClass(): void {
+    var curr_time = document.getElementById("curr-time");
+    if (error) {
+      if (curr_time) curr_time.classList.add("error");
+    } else {
+      if (curr_time) curr_time.classList.remove("error");
+    }
+  }
+
+  addErrorClass();
+
   return (
     <div className="timer">
       <p className="display-title">time:</p>
-      <p className="display-value">
+      <p className="display-value" id="curr-time">
         {`
             ${min < 10 ? "0" + min : min} : 
             ${sec < 10 ? "0" + sec : sec} : 

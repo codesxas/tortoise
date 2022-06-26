@@ -7,6 +7,7 @@
 /* heading font-sizes */
 /* smaller than heading font sizes */
 /* font-family */
+/* screen sizes */
 body {
   padding: 0;
   margin: 0;
@@ -31,10 +32,27 @@ body {
 .header .title {
   font-size: 2.4rem;
 }
+@media only screen and (max-width: 768px) {
+  .header .title {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header .title {
+    font-size: 1.8rem;
+  }
+}
 .header .desc {
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
+}
+@media only screen and (max-width: 480px) {
+  .header .desc {
+    font-size: 0.7rem;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 .container {
@@ -83,18 +101,38 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 768px) {
+  .container .game-container .char-screen {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .game-container .char-screen {
+    width: 100%;
+  }
+}
 .container .game-container .char-screen span {
   font-size: 5.6rem;
   margin: 0;
   font-weight: 500;
   font-family: "Libre Baskerville", serif;
 }
-.container .game-container .char-screen span.failed {
+@media only screen and (max-width: 768px) {
+  .container .game-container .char-screen span {
+    font-size: 3.6rem;
+  }
+}
+.container .game-container .char-screen span.error {
   color: #f03f6c;
 }
 .container .game-container .custom-input-group {
   width: 30rem;
   margin: 4rem auto 0;
+}
+@media only screen and (max-width: 480px) {
+  .container .game-container .custom-input-group {
+    width: 100%;
+  }
 }
 .container .game-container .custom-input-group .input-group-append {
   cursor: pointer;
@@ -116,6 +154,12 @@ body {
   border: none;
   color: #fff;
 }
+@media only screen and (max-width: 480px) {
+  .container .game-container .custom-input-group .input-group-text {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
 .container .game-container .custom-input {
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
@@ -124,6 +168,12 @@ body {
   box-shadow: none;
   border-radius: 0.5rem 0 0 0.5rem;
   background-color: #f9f1e8;
+}
+@media only screen and (max-width: 480px) {
+  .container .game-container .custom-input {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 }
 .container .game-container .text-error {
   line-height: 4rem;
@@ -138,12 +188,42 @@ body {
   top: 3rem;
   right: 5rem;
 }
+@media only screen and (max-width: 768px) {
+  .timer {
+    top: 2rem;
+    right: 3rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .timer {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 3rem;
+  }
+}
 .timer .display-title,
 .timer .display-value {
   text-transform: capitalize;
   text-align: right;
   font-size: 1rem;
   margin: 0;
+}
+@media only screen and (max-width: 768px) {
+  .timer .display-title,
+.timer .display-value {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .timer .display-title,
+.timer .display-value {
+    text-align: center;
+  }
+}
+.timer .display-title.error,
+.timer .display-value.error {
+  color: #f03f6c;
 }
 .timer .display-value {
   letter-spacing: 3px;

@@ -23,11 +23,23 @@ body {
 
   .title {
     font-size: $fs-h4;
+    @media only screen and (max-width: $media-md) {
+      font-size: $fs-h5;
+    }
+    @media only screen and (max-width: $media-sm) {
+      font-size: $fs-h6;
+    }
   }
   .desc {
     font-size: $fs-nano;
     font-weight: 300;
     letter-spacing: 1px;
+
+    @media only screen and (max-width: $media-sm) {
+      font-size: calc($fs-nano - 0.3rem);
+      width: 60%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -86,13 +98,25 @@ body {
       align-items: center;
       justify-content: center;
 
+      @media only screen and (max-width: $media-md) {
+        width: 80%;
+      }
+
+      @media only screen and (max-width: $media-sm) {
+        width: 100%;
+      }
+
       span {
         font-size: calc($fs-h1 + 2rem);
         margin: 0;
         font-weight: 500;
         font-family: $ff-alt-alpha;
 
-        &.failed {
+        @media only screen and (max-width: $media-md) {
+          font-size: $fs-h1;
+        }
+
+        &.error {
           color: #f03f6c;
         }
       }
@@ -101,6 +125,10 @@ body {
     .custom-input-group {
       width: 30rem;
       margin: 4rem auto 0;
+
+      @media only screen and (max-width: $media-sm) {
+        width: 100%;
+      }
 
       .input-group-append {
         cursor: pointer;
@@ -125,6 +153,11 @@ body {
         background-color: #ef416c;
         border: none;
         color: $clr-ntrl-min;
+
+        @media only screen and (max-width: $media-sm) {
+          font-size: $fs-nano;
+          padding: 0.5rem 1rem;
+        }
       }
     }
 
@@ -136,6 +169,11 @@ body {
       box-shadow: none;
       border-radius: 0.5rem 0 0 0.5rem;
       background-color: #f9f1e8;
+
+      @media only screen and (max-width: $media-sm) {
+        font-size: $fs-nano;
+        padding: 0.5rem 1rem;
+      }
     }
 
     .text-error {
@@ -153,12 +191,36 @@ body {
   top: 3rem;
   right: 5rem;
 
+  @media only screen and (max-width: $media-md) {
+    top: 2rem;
+    right: 3rem;
+  }
+
+  @media only screen and (max-width: $media-sm) {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 3rem;
+  }
+
   .display-title,
   .display-value {
     text-transform: capitalize;
     text-align: right;
     font-size: $fs-nano;
     margin: 0;
+
+    @media only screen and (max-width: $media-md) {
+      font-size: calc($fs-nano - 0.3rem);
+    }
+
+    @media only screen and (max-width: $media-sm) {
+      text-align: center;
+    }
+
+    &.error {
+      color: #f03f6c;
+    }
   }
 
   .display-value {

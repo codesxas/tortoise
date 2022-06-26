@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Body from "../components/Body";
-import Header from "../components/header/Header";
+import Header from "../components/Header";
 import Timer from "../components/Timer";
 
 export interface State {
@@ -90,6 +90,7 @@ function Game() {
         }
       } else {
         handleChange("error", true);
+        startTimer(state.time + 50);
       }
     }
 
@@ -97,6 +98,7 @@ function Game() {
   };
 
   const startTimer = (time: number): void => {
+    clearInterval(state.timer);
     let timer = window.setInterval(() => {
       time = time + 1;
       handleChange("time", time);
@@ -126,13 +128,17 @@ function Game() {
 
   return (
     <div className="main">
-      <Timer time={state.time} highScore={state.highScore} />
       <Header />
       <Body
         startGame={startGame}
         state={state}
         checkInputString={checkInputString}
         resetTimer={resetTimer}
+      />
+      <Timer
+        time={state.time}
+        highScore={state.highScore}
+        error={state.error}
       />
     </div>
   );
